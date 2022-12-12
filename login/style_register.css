@@ -1,0 +1,90 @@
+
+/*estilo de register*/
+
+.container-xl.position-relative {
+  position: absolute !important;
+  margin-left: -431px !important;
+  margin-inline-end: auto !important;
+  max-width: 365px!important;
+  max-height: 614px!important;
+
+}
+
+body#register{
+  background-image: url(https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp);
+  background-size: 80%;
+  /* background-blend-mode: overlay; */
+  background-color: rgb(0 0 0) !important;
+  background-blend-mode: difference;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #00000000;
+      border: 1px solid #3ef5b0;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    background-image: linear-gradient(to bottom,#e8e8e800 0,#f5f5f500 100%);
+    background-repeat: repeat-x;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #09f98a;
+    background-color: #fff;
+}
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+form {
+    color: aqua;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+      background-color: #080505;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.modal-content {
+    color: black;
+}
+.col-md-offset-4 {
+    margin-left: 33.33333333%;
+    color: aliceblue;
+}
+a {
+    color: #1aff80;
+    text-decoration: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #006648;
+    border-color: #42d7af;
+    background-image: linear-gradient(to bottom,#00000000 0,#265a8800 100%);
+}
