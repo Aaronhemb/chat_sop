@@ -15,6 +15,7 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --text-color2: #0000000;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -29,6 +30,8 @@ body{
     transition: var(--tran-05);
 }
 
+
+
 ::selection{
     background-color: var(--primary-color);
     color: #fff;
@@ -41,6 +44,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --text-color2: #ccc;
 }
 
 /* ===== Sidebar ===== */
@@ -58,6 +62,7 @@ body.dark{
 .sidebar.close{
     width: 88px;
 }
+
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -307,3 +312,12 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+/*Se debe de llamar a la etiqueta con la class para que pueda capturar el color*/
+/*si requires cargar mas colores al inicio de root y debes de cargarlos tambien en modo nocturno con el mismo nombre de la variable*/
+/*En todo caso con las variables ya creadas es mas sencillo*/
+div.titulo {
+    color: var(--text-color2);
+  }
+  div.Usuario {
+      color: var(--text-color2);
+    }

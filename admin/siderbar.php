@@ -17,12 +17,22 @@
             <div class="image-text">
                 <span class="image">
                     <!--<img src="logo.png" alt="">-->
-               
+                    <?php
+                      $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$_SESSION['usr_unique_id']}");
+                      if(mysqli_num_rows($sql) > 0){
+                        $row = mysqli_fetch_assoc($sql);
+                      }
+                    ?>
+                    <img id="img_menu" src="../login/images/<?php echo $row['img']; ?>" alt="">
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">User:<?php echo $_SESSION['usr_fname']; ?></span>
-                    <span class="profession">ID:<?php echo $_SESSION['usr_unique_id']; ?></span>
+                    <span class="name"> <?php echo $_SESSION['usr_fname'];
+                                                    echo "</br>";
+                                                    echo $_SESSION['usr_lname']; ?></span>
+                    <span class="profession">ID: <?php echo $_SESSION['usr_unique_id']; ?></span>
+
+
                 </div>
             </div>
 
@@ -31,79 +41,42 @@
 
         <div class="menu-bar">
             <div class="menu">
+              <div class="bottom-content">
+                  <li class="">
+                      <a href="../login/logout.php">
+                          <i class='bx bx-log-out icon' ></i>
+                          <span class="text nav-text">Logout</span>
+                      </a>
+                  </li>
 
+                  <li class="mode">
+                      <div class="sun-moon">
+                          <i class='bx bx-moon icon moon'></i>
+                          <i class='bx bx-sun icon sun'></i>
+                      </div>
+                      <span class="mode-text text">Dark mode</span>
+
+                      <div class="toggle-switch">
+                          <span class="switch"></span>
+                      </div>
+                  </li>
+
+              </div>
+              <div class="search">
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
-                </li>
+                    <button disabled><i style="display:none;" class="fas fa-search"></i></button>
+                 </li>
+                </div>
+            <!--Aqui inicia el buscador de los chat-->
 
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Chat</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span class="text nav-text">Solicitudes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Analytics</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Likes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-wallet icon' ></i>
-                            <span class="text nav-text">Wallets</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="../login/login.php">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
+            <div class="users-list">
 
             </div>
+            <script src="./js/usuarios.js"></script>
+            <!--Aqui comienza el boton para salir-->
+
         </div>
 
     </nav>
@@ -111,12 +84,13 @@
 
 
     <script>
-        const body = document.querySelector('body'),
+      const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
       toggle = body.querySelector(".toggle"),
       searchBtn = body.querySelector(".search-box"),
       modeSwitch = body.querySelector(".toggle-switch"),
       modeText = body.querySelector(".mode-text");
+       titulo = body.querySelector(".titulo");
 
 
 toggle.addEventListener("click" , () =>{

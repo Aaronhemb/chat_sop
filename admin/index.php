@@ -12,26 +12,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css_chat/index.css">
+      <link rel="stylesheet" href="./css_chat/siderbar.css">
     <title></title>
   </head>
   <body>
-    <div class="Usuario" style="margin-left:250px;">
-      <?php echo $_SESSION['usr_unique_id'];
-            echo $_SESSION['usr_fname'];
-            echo $_SESSION['usr_email'];
 
-        ?>
-    </div>
-<div class="">
+<div class="titulo" id="perfil">
   <?php
-    $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+    $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$_SESSION['usr_unique_id']}");
     if(mysqli_num_rows($sql) > 0){
       $row = mysqli_fetch_assoc($sql);
     }
   ?>
-  <img id="img_perfil" src="../login/images/<?php echo $row['img']; ?>" alt="">
+   <img id="img_perfil" src="../login/images/<?php echo $row['img']; ?>" alt="">
+      <label for="" id="email_perfil"><?php  echo $_SESSION['usr_email']; ?> </label>
+     
 </div>
+  <script type="text/javascript">
+    const body = document.querySelector('body'),
+    titulo = div.querySelector(".div");
+    Usuario = div.querySelector(".div");
 
+  </script>
 
   </body>
 </html>

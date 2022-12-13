@@ -18,12 +18,14 @@ if (isset($_POST['login'])) {
 		//$_SESSION['usr_estado'] = $row['estado'];
 
 		if($row['estado']==0){
-			$_SESSION['usr_id'] = $row['id'];
+			$_SESSION['usr_id'] = $row['user_id'];
 			$_SESSION['usr_fname'] = $row['fname'];
+			$_SESSION['usr_lname'] = $row['lname'];
 			$_SESSION['usr_email'] = $row['email'];
+	 
 			$_SESSION['usr_unique_id'] = $row['unique_id'];
 
-		
+
 			header("Location: ../admin/index.php");
 		}else
 		$errormsg = "Esta cuenta esta desactivada";

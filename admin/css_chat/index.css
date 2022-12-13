@@ -1,0 +1,30 @@
+img#img_perfil {
+  margin-left: 25px;
+  margin-right: 29px;
+  margin-top: 28px;
+  object-fit: cover;
+  border-radius: 150%;
+  height: 50px;
+  width: 50px;
+
+}
+
+img#img_menu {
+    object-fit: cover;
+    border-radius: 150%;
+    height: 50px;
+    width: 50px;
+}
+label#email_perfil {
+    margin-top: 42px;
+    margin-left: 17px;
+    margin-right: 464px;
+    margin-bottom: 18px;
+
+}
+div#perfil {
+    margin-left: 283px;
+    display: inline-flex;
+    border-bottom: groove;
+    border-color: mediumslateblue;
+}
