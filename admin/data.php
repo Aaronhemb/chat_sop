@@ -15,15 +15,33 @@
         ($row['status'] == "Desconectado ahora") ? $offline = "offline" : $offline = "";
         ($outgoing_id == $row['unique_id']) ? $hid_me = "hide" : $hid_me = "";
 
-        $output .= '<a href="chat.php?user_id='. $row['unique_id'] .'">
-                    <div class="content">
-                    <img src="../modelo/images/'. $row['img'] .'" alt="">
-                    <div class="details">
-                        <span>'. $row['fname']. " " . $row['lname'] .'</span>
-                        <p>'. $you . $msg .'</p>
+        $output .= '<a style="margin-left:5px; margin-top:5px; display:flex;
+        list-style: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        width: 200%;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: var(--tran-03);
+
+         " href="chat.php?user_id='. $row['unique_id'] .'">
+                    <div class="content" style="flex-direction: column;" >
+                    <span class="image">
+                    <img style="object-fit: cover; border-radius: 150%;
+                    height: 50px; width: 50px;" src="../login/images/'. $row['img'] .'" alt="">
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name" style="display:flex;  height: calc(100% - 55pxpx);    transition: var(--tran-05);
+                        margin-left:65px; margin-top:-60px!important">'. $row['fname']. " " . $row['lname'] .'</span>
+
+                        <span class="profession" style="display:   height: calc(100% - 55pxpx);    transition: var(--tran-05);
+                        flex; margin-left:65px; margin-top:1px!important ">'. $you . $msg .'</span>
                     </div>
                     </div>
-                    <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+                    <div style="display: flex;  " class="status-dot '. $offline .'"><i class="fa fa-circle"></i></div>
                 </a>';
     }
 ?>
+<!--Cuando -->

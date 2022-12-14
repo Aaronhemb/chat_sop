@@ -39,29 +39,8 @@
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-        <div class="menu-bar">
-            <div class="menu">
-              <div class="bottom-content">
-                  <li class="">
-                      <a href="../login/logout.php">
-                          <i class='bx bx-log-out icon' ></i>
-                          <span class="text nav-text">Logout</span>
-                      </a>
-                  </li>
 
-                  <li class="mode">
-                      <div class="sun-moon">
-                          <i class='bx bx-moon icon moon'></i>
-                          <i class='bx bx-sun icon sun'></i>
-                      </div>
-                      <span class="mode-text text">Dark mode</span>
-
-                      <div class="toggle-switch">
-                          <span class="switch"></span>
-                      </div>
-                  </li>
-
-              </div>
+              <!--Aqui comienza el buscador de nuestros contactos-->
               <div class="search">
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
@@ -70,12 +49,50 @@
                  </li>
                 </div>
             <!--Aqui inicia el buscador de los chat-->
+            <div class="users-list" style="
 
-            <div class="users-list">
+            height: 309px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: -29px;
+            overflow: auto;
+            overflow-x: hidden;
+            outline: none;
+            border: none;
+            background-color: var(--primary-color-light);
+            color: var(--text-color);
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: var(--tran-04);
+
+                 " >
 
             </div>
             <script src="./js/usuarios.js"></script>
             <!--Aqui comienza el boton para salir-->
+            <div class="menu-bar">
+                <div class="menu">
+                  <div class="bottom-content">
+                      <li class="">
+                          <a href="../login/logout.php">
+                              <i class='bx bx-log-out icon' ></i>
+                              <span class="text nav-text">Logout</span>
+                          </a>
+                      </li>
+                      <!--Aqui comienza el boton para cambiar modo nocturno-->
+                      <li class="mode">
+                          <div class="sun-moon">
+                              <i class='bx bx-moon icon moon'></i>
+                              <i class='bx bx-sun icon sun'></i>
+                          </div>
+                          <span class="mode-text text">Dark mode</span>
+
+                          <div class="toggle-switch">
+                              <span class="switch"></span>
+                          </div>
+                      </li>
+                  </div>
 
         </div>
 
