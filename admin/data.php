@@ -24,19 +24,20 @@
         border-radius: 6px;
         text-decoration: none;
         transition: var(--tran-03);
+        border-bottom: groove;
+        border-color: mediumslate;
 
-         " href="chat.php?user_id='. $row['unique_id'] .'">
-                    <div class="content" style="flex-direction: column;" >
+         " href="index.php?user_id='. $row['unique_id'] .'">
+                    <div class="content" style="flex-direction: column; margin-top:10px; " >
                     <span class="image">
                     <img style="object-fit: cover; border-radius: 150%;
                     height: 50px; width: 50px;" src="../login/images/'. $row['img'] .'" alt="">
                     </span>
-
-                    <div class="text logo-text">
-                        <span class="name" style="display:flex;  height: calc(100% - 55pxpx);    transition: var(--tran-05);
+                    <div class="text logo-text ">
+                        <span class="name" style="display:flex; Font-size:18px;  height: calc(100% - 55pxpx);    transition: var(--tran-05);
                         margin-left:65px; margin-top:-60px!important">'. $row['fname']. " " . $row['lname'] .'</span>
 
-                        <span class="profession" style="display:   height: calc(100% - 55pxpx);    transition: var(--tran-05);
+                        <span class="profession" style="display: Font-size:5px;  height: calc(100% - 55pxpx);    transition: var(--tran-05);
                         flex; margin-left:65px; margin-top:1px!important ">'. $you . $msg .'</span>
                     </div>
                     </div>
@@ -44,4 +45,4 @@
                 </a>';
     }
 ?>
-<!--Cuando -->
+<?php /*Actualizacion pendiente de que los contactos esten agregados por solicitud no en general*/ ?>
