@@ -37,6 +37,7 @@
             </div>
 
             <i class='bx bx-chevron-right toggle'></i>
+
         </header>
 
 
@@ -108,9 +109,11 @@
       modeSwitch = body.querySelector(".toggle-switch"),
       modeText = body.querySelector(".mode-text");
        titulo = body.querySelector(".titulo");
+        details = body.querySelector(".div");
 
 
-toggle.addEventListener("click" , () =>{
+
+  toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })
 

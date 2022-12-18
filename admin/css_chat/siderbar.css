@@ -323,3 +323,7 @@ div.titulo {
   div.Usuario {
       color: var(--text-color2);
     }
+
+div.details{
+      color: var(--text-color2);
+}

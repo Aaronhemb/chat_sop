@@ -28,3 +28,7 @@ div#perfil {
     border-bottom: groove;
     border-color: mediumslateblue;
 }
+
+div.details{
+      color: var(--text-color2);
+}
